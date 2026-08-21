@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Food Delivery Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold fs-3" href="#">
+            <span class="logo-icon">🍔</span>
+            Food<span class="text-orange">ie</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#popular">Popular</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#offers">Offers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex gap-2 align-items-center">
+
+                <button class="icon-btn">
+                    <i class="bi bi-search"></i>
+                </button>
+
+                <button
+                    class="icon-btn cart-btn"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#cartCanvas"
+                >
+                    <i class="bi bi-cart3"></i>
+                    <span id="cartCount">0</span>
+                </button>
+
+                <button
+                    class="btn login-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                >
+                    Login
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+                    🔥 #1 Food Delivery App
+                </span>
+
+                <h1>
+                    Delicious Food
+                    <span>Delivered</span>
+                    To Your Door.
+                </h1>
+
+                <p>
+                    Order your favourite meals from the best restaurants
+                    around you. Fresh, fast and delicious.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#popular" class="btn btn-orange">
+                        Order Now
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a href="#categories" class="btn btn-light-custom">
+                        Explore Food
+                    </a>
+
+                </div>
+
+                <div class="delivery-info">
+
+                    <div>
+                        <i class="bi bi-clock"></i>
+                        <div>
+                            <strong>30 Min</strong>
+                            <small>Fast Delivery</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-star-fill"></i>
+                        <div>
+                            <strong>4.9/5</strong>
+                            <small>Customer Rating</small>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>100%</strong>
+                            <small>Fresh Food</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <div class="hero-image-container">
+
+                    <div class="hero-circle"></div>
+
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                        class="hero-food"
+                        alt="Burger"
+                    >
+
+                    <div class="floating-card card-one">
+                        <span>⭐</span>
+                        <div>
+                            <strong>4.9</strong>
+                            <small>Rating</small>
+                        </div>
+                    </div>
+
+                    <div class="floating-card card-two">
+                        <span>🚴</span>
+                        <div>
+                            <strong>30 min</strong>
+                            <small>Delivery</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories" class="section-padding">
+
+    <div class="container">
+
+        <div class="section-heading text-center">
+
+            <span>EXPLORE MENU</span>
+
+            <h2>
+                What are you <strong>craving?</strong>
+            </h2>
+
+            <p>
+                Choose from our wide range of delicious food categories
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="category-card">
+
+                    <div class="category-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80"
+                            alt="Burger"
+                        >
+                    </div>
+
+                    <h5>Burgers</h5>
+                    <p>25 items</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="category-card">
+
+                    <div class="category-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80"
+                            alt="Pizza"
+                        >
+                    </div>
+
+                    <h5>Pizza</h5>
+                    <p>18 items</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="category-card">
+
+                    <div class="category-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=400&q=80"
+                            alt="Asian Food"
+                        >
+                    </div>
+
+                    <h5>Asian</h5>
+                    <p>30 items</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="category-card">
+
+                    <div class="category-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=80"
+                            alt="Indian Food"
+                        >
+                    </div>
+
+                    <h5>Indian</h5>
+                    <p>35 items</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="category-card">
+
+                    <div class="category-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=400&q=80"
+                            alt="Desserts"
+                        >
+                    </div>
+
+                    <h5>Desserts</h5>
+                    <p>20 items</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-md-4 col-lg-2">
+
+                <div class="category-card">
+
+                    <div class="category-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=400&q=80"
+                            alt="Drinks"
+                        >
+                    </div>
+
+                    <h5>Drinks</h5>
+                    <p>15 items</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= POPULAR FOOD ================= -->
+
+<section id="popular" class="section-padding bg-light-custom">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>POPULAR DISHES</span>
+
+            <h2>
+                Our <strong>Best Sellers</strong>
+            </h2>
+
+            <p>
+                Most loved dishes by our customers
+            </p>
+
+        </div>
+
+
+        <div class="row g-4" id="foodContainer">
+
+            <!-- Product 1 -->
+
+            <div class="col-md-6 col-lg-3 food-item">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="discount">20% OFF</span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=85"
+                            alt="Classic Burger"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <h4>Classic Beef Burger</h4>
+
+                        <p>
+                            Juicy beef patty with cheese & fresh vegetables
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹199</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Classic Beef Burger', 199)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="col-md-6 col-lg-3 food-item">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="discount">15% OFF</span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=85"
+                            alt="Pizza"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                        <h4>Cheese Margherita</h4>
+
+                        <p>
+                            Fresh mozzarella, tomato sauce & basil
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹299</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Cheese Margherita', 299)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="col-md-6 col-lg-3 food-item">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="discount">10% OFF</span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=600&q=85"
+                            alt="Noodles"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.7
+                        </div>
+
+                        <h4>Spicy Chicken Noodles</h4>
+
+                        <p>
+                            Asian style noodles with spicy chicken
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹249</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Spicy Chicken Noodles', 249)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div class="col-md-6 col-lg-3 food-item">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <span class="discount">25% OFF</span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=85"
+                            alt="Samosa"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <h4>Indian Samosa</h4>
+
+                        <p>
+                            Crispy samosa served with mint chutney
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹99</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Indian Samosa', 99)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 5 -->
+
+            <div class="col-md-6 col-lg-3 food-item">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=85"
+                            alt="Donut"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                        <h4>Chocolate Donut</h4>
+
+                        <p>
+                            Soft donut topped with rich chocolate
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹129</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Chocolate Donut', 129)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 6 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=85"
+                            alt="Pizza"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.6
+                        </div>
+
+                        <h4>Pepperoni Pizza</h4>
+
+                        <p>
+                            Loaded with pepperoni and mozzarella
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹399</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Pepperoni Pizza', 399)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 7 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=85"
+                            alt="Pizza"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.8
+                        </div>
+
+                        <h4>Veggie Pizza</h4>
+
+                        <p>
+                            Fresh vegetables with melted cheese
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹279</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Veggie Pizza', 279)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 8 -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="food-card">
+
+                    <div class="food-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=85"
+                            alt="Burger"
+                        >
+
+                        <button class="heart">
+                            <i class="bi bi-heart"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="food-content">
+
+                        <div class="rating">
+                            ⭐ 4.9
+                        </div>
+
+                        <h4>Cheese Burger</h4>
+
+                        <p>
+                            Double cheese burger with crispy fries
+                        </p>
+
+                        <div class="food-bottom">
+
+                            <strong>₹249</strong>
+
+                            <button
+                                class="add-btn"
+                                onclick="addToCart('Cheese Burger', 249)"
+                            >
+                                <i class="bi bi-plus"></i>
+                                Add
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFER ================= -->
+
+<section id="offers" class="offer-section">
+
+    <div class="container">
+
+        <div class="offer-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <span class="offer-small">
+                        SPECIAL OFFER
+                    </span>
+
+                    <h2>
+                        Get 50% OFF on your
+                        <br>
+                        first order 🎉
+                    </h2>
+
+                    <p>
+                        Use code <strong>FOOD50</strong> at checkout
+                        and enjoy your first meal at half price.
+                    </p>
+
+                    <button class="btn btn-light">
+                        Order Now
+                    </button>
+
+                </div>
+
+                <div class="col-lg-5 text-center">
+
+                    <div class="offer-food">
+                        🍕
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APP SECTION ================= -->
+
+<section class="app-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="section-label">
+                    FOODIE APP
+                </span>
+
+                <h2>
+                    Your favourite food,
+                    <strong>anytime, anywhere.</strong>
+                </h2>
+
+                <p>
+                    Download the Foodie app and enjoy faster delivery,
+                    exclusive offers and easy online ordering.
+                </p>
+
+                <div class="app-buttons">
+
+                    <button>
+                        <i class="bi bi-google-play"></i>
+                        <span>
+                            <small>GET IT ON</small>
+                            Google Play
+                        </span>
+                    </button>
+
+                    <button>
+                        <i class="bi bi-apple"></i>
+                        <span>
+                            <small>DOWNLOAD ON</small>
+                            App Store
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <div class="mobile-mockup">
+
+                    <div class="mobile-screen">
+
+                        <div class="mobile-header">
+                            <strong>Foodie</strong>
+                            <i class="bi bi-cart"></i>
+                        </div>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80"
+                            alt="Food"
+                        >
+
+                        <h5>Delicious Burger</h5>
+
+                        <p>₹199</p>
+
+                        <button>Add to Cart</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <h3>
+                    🍔 Food<span>ie</span>
+                </h3>
+
+                <p>
+                    Delicious food delivered directly to your doorstep.
+                    Order from the best restaurants around you.
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Company</h5>
+
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h5>Support</h5>
+
+                <a href="#">Help Center</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">FAQs</a>
+
+            </div>
+
+
+            <div class="col-lg-4">
+
+                <h5>Subscribe</h5>
+
+                <p>
+                    Get exclusive offers directly in your inbox.
+                </p>
+
+                <div class="subscribe">
+
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                    >
+
+                    <button>
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright">
+            © 2026 Foodie. All Rights Reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= CART OFFCANVAS ================= -->
+
+<div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="cartCanvas"
+>
+
+    <div class="offcanvas-header">
+
+        <h5 class="offcanvas-title">
+            🛒 Your Cart
+        </h5>
+
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+        ></button>
+
+    </div>
+
+    <div class="offcanvas-body">
+
+        <div id="cartItems">
+
+            <div class="empty-cart">
+                <i class="bi bi-cart-x"></i>
+
+                <h5>Your cart is empty</h5>
+
+                <p>Add some delicious food!</p>
+            </div>
+
+        </div>
+
+        <div class="cart-total">
+
+            <div>
+                <span>Subtotal</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button class="btn btn-orange w-100 mt-3">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div
+    class="modal fade"
+    id="loginModal"
+    tabindex="-1"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content login-modal">
+
+            <div class="modal-header border-0">
+
+                <h5 class="modal-title">
+                    Welcome Back 👋
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                ></button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p class="text-muted">
+                    Login to continue ordering delicious food.
+                </p>
+
+                <form>
+
+                    <div class="mb-3">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>Password</label>
+
+                        <input
+                            type="password"
+                            class="form-control"
+                            placeholder="Enter your password"
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="btn btn-orange w-100"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+                <div class="login-divider">
+                    OR
+                </div>
+
+                <button class="google-btn">
+                    <i class="bi bi-google"></i>
+                    Continue with Google
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
